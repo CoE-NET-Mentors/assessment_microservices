@@ -465,3 +465,7 @@ Thumbs.db
 package-lock.json
 .parcel-cache/
 
+# Local mentor-only assessment notes. Keep DP-readable docs under docs/assessment.
+local-mentor-notes/
+ASSESSMENT_GUIDE.md
+
