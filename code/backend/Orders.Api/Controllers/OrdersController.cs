@@ -18,7 +18,7 @@ namespace Orders.Api.Controllers
             [FromQuery] OrderStatus? status)
             => throw new NotImplementedException();
 
-        [HttpPatch("{id:guid}")]
+        [HttpPut("{id:guid}")]
         public Task<OrderResponse?> UpdateStatusAsync(
             Guid id,
             UpdateOrderStatusRequest request)

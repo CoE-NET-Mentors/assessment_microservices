@@ -11,7 +11,7 @@ namespace Inventory.Api.Controllers
         public Task<ProductResponse?> GetByIdAsync(Guid id)
             => throw new NotImplementedException();
 
-        [HttpPatch("{id:guid}/stock")]
+        [HttpPut("{id:guid}/stock")]
         public Task<bool> AdjustStockAsync(Guid id, AdjustStockRequest request)
             => throw new NotImplementedException();
     }
