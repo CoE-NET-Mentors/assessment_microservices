@@ -16,6 +16,7 @@ The official roadmap and assessment evidence format live outside this repository
 - Do not put hidden grading guidance in committed task files.
 - Do not maintain a shadow copy of the roadmap.
 - Duplicate frontend tasks per framework when framework-specific instructions matter.
+- DP should be showing research, prompts, and investigations on the shared screen; occasional background windows on secondary monitors are acceptable but primary activity must remain visible.
 
 ## Task Catalog
 
