@@ -18,6 +18,8 @@ The Orders API needs to store and retrieve orders through the existing data acce
 
 Use `code/backend/Orders.Api`, especially `OrdersDbContext`, `OrdersService`, contracts, and the orders controller.
 
+Consider the existing system boundaries and integrations before adding new data ownership or persistence responsibilities.
+
 ## Evaluates
 
 - C# advanced fundamentals
@@ -34,9 +36,11 @@ Use `code/backend/Orders.Api`, especially `OrdersDbContext`, `OrdersService`, co
 - Listing orders returns persisted orders.
 - Filtering by customer or status works when supplied.
 - Invalid quantities are rejected with a clear API response.
-- Existing behavior is preserved.
+- The order workflow remains consistent with the existing system architecture.
 - Relevant tests are added or updated where backend test coverage exists.
 - `dotnet build code/backend/AssessmentMicroservices.slnx` passes.
+
+The task requires persistence through the configured data access layer but does not prescribe a database provider. Clarify any provider change if its setup materially affects scope or time.
 
 ## Discussion Extensions
 

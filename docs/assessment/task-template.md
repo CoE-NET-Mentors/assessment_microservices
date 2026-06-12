@@ -18,6 +18,8 @@ Describe the assigned work as if it came from a customer or product stakeholder.
 
 Point to the relevant project, endpoint, page, service, component, or file area.
 
+The stated starting point is part of the task context. Inspect it and clarify material structural changes with the mentor when needed.
+
 ## Evaluates
 
 - Roadmap capability or capability group
@@ -27,7 +29,9 @@ Point to the relevant project, endpoint, page, service, component, or file area.
 ## Acceptance Criteria
 
 - The requested behavior works.
-- Existing behavior is preserved.
+- Implemented runtime behavior outside the requested change remains working.
+- Existing project structure, service boundaries, and data ownership are respected.
+- Structural changes are intentional and do not leave unexplained duplicate or replacement implementations.
 - Relevant tests are added or updated where the repo already has test coverage.
 - The relevant build command passes.
 - The DP can explain the implementation and tradeoffs.

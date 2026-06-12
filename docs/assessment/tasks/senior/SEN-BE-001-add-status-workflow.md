@@ -33,7 +33,7 @@ Use `code/backend/Orders.Api`, especially the orders controller, service, `Order
 - Pending orders can be cancelled.
 - Invalid transitions are rejected with a clear API response.
 - Confirming an order coordinates with inventory stock adjustment when that integration is in scope for the session.
-- Existing behavior is preserved.
+- Implemented runtime behavior and the Orders/Inventory ownership boundary are preserved.
 - Relevant tests are added or updated where backend test coverage exists.
 - `dotnet build code/backend/AssessmentMicroservices.slnx` passes.
 

@@ -33,6 +33,7 @@ Use the full repository and create or update a short ADR-style document if the s
 - Explain the options considered.
 - Explain the consequences and tradeoffs.
 - Include a small repo change when useful to make the decision concrete.
+- Identify any effect on existing project structure, service boundaries, and data ownership.
 - Relevant build commands pass if code changes are made.
 - The DP can defend the decision and identify what evidence would change it.
 

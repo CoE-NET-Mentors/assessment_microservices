@@ -31,7 +31,7 @@ Use `code/backend/Orders.Api` and add a test project only if one does not alread
 - Add tests for creating an order with valid input.
 - Add tests for rejecting invalid quantity.
 - Keep the production implementation simple and readable.
-- Existing behavior is preserved.
+- Implemented runtime behavior and the existing project structure are preserved.
 - `dotnet build code/backend/AssessmentMicroservices.slnx` passes.
 - `dotnet test` passes for the relevant test project or solution.
 

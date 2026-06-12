@@ -31,7 +31,7 @@ Use `code/backend/Orders.Api` and any integration points with `Inventory.Api`.
 
 - Identify one capability boundary that would be reasonable to extract later.
 - Make a small code or documentation change that clarifies the boundary.
-- Preserve existing behavior.
+- Preserve implemented runtime behavior and current ownership until the proposed migration explicitly changes it.
 - Avoid creating unnecessary infrastructure.
 - `dotnet build code/backend/AssessmentMicroservices.slnx` passes if code changes are made.
 - The DP can explain the migration path and risks.

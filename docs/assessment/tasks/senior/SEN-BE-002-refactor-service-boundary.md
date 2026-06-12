@@ -29,7 +29,8 @@ Use `code/backend/Orders.Api`, especially the controller, service, contracts, do
 
 ## Acceptance Criteria
 
-- The selected refactor preserves existing behavior.
+- The selected refactor preserves implemented runtime behavior.
+- The refactor evolves the provided code path instead of leaving a parallel or abandoned implementation.
 - Business rules are easier to identify and test after the change.
 - Controllers remain focused on HTTP concerns.
 - Relevant tests are added or updated where backend test coverage exists.

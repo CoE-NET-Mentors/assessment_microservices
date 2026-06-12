@@ -32,6 +32,7 @@ Use the full repository, including backend services, frontend apps, and assessme
 - Identify the current architectural constraints.
 - Propose a sequence of changes that keeps the repo working between steps.
 - Include at least one small code, docs, or test change that supports the first step.
+- Make ownership and structural changes explicit rather than leaving parallel implementations behind.
 - Avoid adding cloud or orchestration noise unless it directly supports the migration.
 - Relevant build commands pass if code changes are made.
 - The DP can explain risks, tradeoffs, and rollback options.
