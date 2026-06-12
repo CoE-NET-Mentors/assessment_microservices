@@ -32,7 +32,7 @@ Use both backend services under `code/backend`.
 - Add consistent structured logging around key order and inventory operations.
 - Include enough context to connect an order operation to inventory adjustment.
 - Avoid logging secrets or sensitive customer data.
-- Existing behavior is preserved.
+- Implemented runtime behavior and existing service boundaries are preserved.
 - Relevant tests are added or updated where backend test coverage exists.
 - `dotnet build code/backend/AssessmentMicroservices.slnx` passes.
 

@@ -14,7 +14,23 @@ The Delivery Professional is expected to understand and own any solution they pr
 
 The Delivery Professional must not ask another person outside the assessment meeting for help during the session.
 
-## Repository Scenario
+## Assessment Modes
+
+This repository supports two assessment modes:
+
+### Roadmap Tasks
+
+Roadmap tasks extend the Orders/Inventory system under `code/backend` and `code/frontend`. The task catalog lives under [docs/assessment/tasks](docs/assessment/tasks).
+
+### Custom Challenge
+
+The custom challenge starts from neutral applications under `code/custom-challenge`. The scenario and scope are agreed at the beginning of the session, with approximately 45 minutes for implementation and 15 minutes for demonstration and code defense.
+
+See [docs/assessment/custom-challenge](docs/assessment/custom-challenge).
+
+The mentor will confirm which mode applies before implementation begins.
+
+## Roadmap Scenario
 
 The current scenario is a small order management system split into two independent services:
 
@@ -32,11 +48,19 @@ code/
     AssessmentMicroservices.slnx
     Inventory.Api/
     Orders.Api/
+  custom-challenge/
+    backend/
+      CustomChallenge.slnx
+      CustomChallenge.Api/
+    frontend/
+      angular/
+      react/
   frontend/
     angular/
     react/
 docs/
   assessment/
+    custom-challenge/
     README.md
     ExcelToRepoContextualizer.md
     task-template.md
@@ -103,18 +127,68 @@ Run tests:
 npm test
 ```
 
+### Custom Challenge Backend
+
+```bash
+dotnet run --project code/custom-challenge/backend/CustomChallenge.Api
+```
+
+Build:
+
+```bash
+dotnet build code/custom-challenge/backend/CustomChallenge.slnx
+```
+
+### Custom Challenge React
+
+```bash
+cd code/custom-challenge/frontend/react
+npm install
+npm start
+```
+
+Build:
+
+```bash
+npm run build
+```
+
+### Custom Challenge Angular
+
+```bash
+cd code/custom-challenge/frontend/angular
+npm install
+npm start
+```
+
+Build and test:
+
+```bash
+npm run build
+npm test
+```
+
 ## Assessment Tasks
 
 Assessment tasks live under [docs/assessment/tasks](docs/assessment/tasks).
 
 Task files describe practical work scenarios. They are not grading rubrics and do not determine promotion outcomes. Seniority assessment is based on the official assessment process, mentor judgment, completed work, discussion, and evidence captured in the assessment format.
 
+Custom challenges use [docs/assessment/custom-challenge/challenge.md](docs/assessment/custom-challenge/challenge.md) to record the scenario and agreed scope before implementation begins.
+
 Every task follows the same basic completion contract:
 
 - the requested behavior works
+- implemented runtime behavior outside the task remains working
+- the stated starting points and existing project structure are used
+- existing service boundaries and data ownership are respected
 - the app still builds
 - relevant tests pass when test projects or frontend tests exist
 - the Delivery Professional can explain the implementation and tradeoffs
+
+Placeholder code or `NotImplementedException` means that runtime behavior may still need to be created. It does not make the surrounding files, project structure, service boundaries, or data ownership optional.
+
+Alternative tools and implementation approaches are welcome. Material changes such as replacing a persistence provider, moving an existing feature, introducing a parallel application structure, changing package managers, or moving data between services should be discussed with the mentor before significant time is invested. The assessment timebox does not change when an alternative is selected.
 
 For homework continuation, include:
 
@@ -133,6 +207,8 @@ Use [docs/assessment/ExcelToRepoContextualizer.md](docs/assessment/ExcelToRepoCo
 
 - Keep the baseline working.
 - Prefer small, understandable changes during the assessment.
+- Treat the stated starting point and existing code paths as intentional context for the task.
+- Preserve service ownership: Orders owns orders; Inventory owns products and stock.
 - Use the latest supported .NET, ASP.NET Core, EF Core, React, and Angular versions maintained by this repo.
 - Keep infrastructure local and lightweight.
 - Use Docker only when it helps simulate a dependency without turning the assessment into cloud setup work.

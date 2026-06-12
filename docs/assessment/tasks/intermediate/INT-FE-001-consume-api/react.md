@@ -19,6 +19,8 @@ The React app needs to show live order data from the Orders API instead of place
 
 Use `code/frontend/react`, especially the orders page, order components, models, and API services.
 
+Consider how the complete order workflow uses the pages, components, models, services, and backend applications already present in the repository.
+
 ## Evaluates
 
 - TypeScript fundamentals
@@ -33,7 +35,8 @@ Use `code/frontend/react`, especially the orders page, order components, models,
 - The React app loads orders from the backend API.
 - Loading, empty, and error states are visible.
 - The order list renders useful order information.
-- Existing React behavior is preserved.
+- The complete order workflow remains consistent with the existing application architecture.
+- Material structural changes do not leave unexplained duplicate or abandoned implementations.
 - `npm run build` passes in `code/frontend/react`.
 - Backend build passes if backend changes are made.
 

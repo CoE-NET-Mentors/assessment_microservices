@@ -1,0 +1,15 @@
+main {
+  max-width: 48rem;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0;
+}
